@@ -1,21 +1,32 @@
 // Home Content
 
 .home {
+   width: 900px;
+   margin: 0 auto;
+  
+  
 
-  .intro {
+   
+      
+     
+    }
 
+    .intro {
+    
     h2 {
-      padding: 15px;
+      .padding();
     }
 
     p {
       padding:0 15px;
+      color: @main-font-color;
+      font-weight: bold;
     }
   
   }
 
   .space-images {
-    display: flex;
+    .display();
     flex-wrap: wrap;
     width: 100%;
 
@@ -28,7 +39,7 @@
   }
 
   .visit-planets {
-    padding: 15px;
+    .padding();
 
     h3 {
       margin-top: 11px;
@@ -36,6 +47,8 @@
 
     p {
       margin-top: 13px;
+      color: @main-font-color;
+      font-weight: bold;
     }
   }
 
@@ -43,7 +56,7 @@
     margin-top: 60px;
     border-top: 1px solid @main-border-color;
     padding: 50px 60px;
-    display: flex;
+    .display();
     justify-content: center;
 
     .walk-text {
@@ -55,12 +68,24 @@
 
       p {
         margin-bottom: 26px;
+        color: @main-font-color;
+        font-weight: bold;
       }
 
       .btn {
-      }
-    }
+        .btn-position();
+        .btn-styling();
+        .btn-dimensions();
 
+       
+    }
+  }
+  .btn:hover {
+    color: @btn-bg-color;
+    background-color: white;
+  
+
+}
     .walk-img {
       width: 46%;
       margin-left: 4%;
@@ -72,4 +97,64 @@
       }
     }
   }
-}// home
+// home
+
+@media @phone{
+
+  .home {
+    width: 500px;
+    margin: auto;
+    display: flexbox;
+  
+
+    .heading {
+      margin-left: -250px;  
+    
+
+    }
+
+    .intro-image {
+      width: 100%;
+      border-radius: 5px;
+    }
+
+    .visit-planets{ 
+      margin-bottom: -40px;
+    }
+  
+    .space-images {
+      
+      .blast {
+      width: 100%;
+      }
+    
+      .launch, .sky{
+        display: none;
+      }
+    }
+    
+    .walk{
+      .display();
+      flex-direction: column-reverse;
+    // width: 100%;
+    
+      .walk-text {
+        width: 100%;
+        margin-top: 40px;
+      
+        .btn {
+          width: 100%;
+          height: 60px;
+          padding-top: 15px;
+        }
+      }
+
+      .walk-img{
+        width: 120%;
+        margin-left: -46px;
+      }
+  
+}
+ 
+}
+}
