@@ -1,30 +1,29 @@
 // Home Content
 
-html {
-  box-sizing: border-box;
-}
-
 .home {
    width: 900px;
    margin: 0 auto;
   
 
-    
-  .heading div {
-    display: flex;
-    text-align: center;
-  
-    h1 {
-        display: flex;
-        text-align: center;
-        flex-direction: column;
-        align-content: center;
+    .heading {
+      .display();
+      text-align: center;
+      justify-content: center;
+      flex-direction: column;
+      background-color: @main-border-color;
+      width: 1000px;
+      margin-left: -100px;
+      padding-bottom: 30px;
+      
+      h1 {
+        .display();
+        margin: 15px 25px;
+        font-size: 42px;
         justify-content: center;
+      }
     }
-  }
 
-  .intro {
-
+    .intro {
     
     h2 {
       padding: 15px;
@@ -37,7 +36,7 @@ html {
   }
 
   .space-images {
-    display: flex;
+    .display();
     flex-wrap: wrap;
     width: 100%;
 
@@ -65,7 +64,7 @@ html {
     margin-top: 60px;
     border-top: 1px solid @main-border-color;
     padding: 50px 60px;
-    display: flex;
+    .display();
     justify-content: center;
 
     .walk-text {
@@ -80,6 +79,8 @@ html {
       }
 
       .btn {
+        .btn-para();
+
       }
     }
 
