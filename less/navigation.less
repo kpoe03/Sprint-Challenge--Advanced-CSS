@@ -1,25 +1,49 @@
 // Navigation code here
 
     
-    nav {
+.heading {
+    .display();
+    background-color: @nav-bg;
+    width: 1000px;
+    margin: 0 auto;
+    padding-bottom: 30px;
+    border-color: @nav-border;
+    // text-align: center;
+    flex-direction: column;
+    // justify-content: center;
+    // align-content: center;
+
+    h1 {
         .display();
-        justify-content: space-between;
-        margin: 0 auto;
-        text-align: center;
-        font:@river-bend;
-        padding-bottom: 10px;
+        margin: 15px 25px;
+        font-size: 42px;
+        justify-content: center;
+
+      }
+        
+        nav a {
+            // display: flex;
+            // flex-direction: row;
+            // justify-content: center;
+            // align-content: center;
+            text-decoration: none;
+            font-size: 1.125rem;
+            color: @ebony-clay;
+            margin-left: 140px;
+                    
+                      
             
-        ul {
-                
-            li {
-                display: inline;
-                
-                a {
-                    text-decoration: none;
-                    font-size: 18px;
-                    color: @ebony-clay;
-                }       
             
-            }   
+        }
+    }
+
+    @media @phone {
+        .heading{
+            display: inline;
+            
+            a {
+                margin: -110px;
+                
+            }
         }
     }
